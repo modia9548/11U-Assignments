@@ -12,7 +12,7 @@ import becker.robots.Robot;
  *
  * @author Aakash Modi
  */
-public class A1Q3 {
+public class A2Q3 {
 
     /**
      * @param args the command line arguments

@@ -1,0 +1,10 @@
+1 
+a: true
+b: true 
+c: false
+d: true
+f: false
+g: true
+2
+ they are the same, since the first one says if you can pick it up, turn right but if you can't turn left, 
+and the second one says if you can't pick it up turn left but if you can turn right
