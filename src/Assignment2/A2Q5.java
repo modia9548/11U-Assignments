@@ -77,48 +77,41 @@ public class A2Q5 {
         new Thing(aakash, 8, 2);
         new Thing(aakash, 8, 4);
         //create algorithm for robot to follow
-        //move,check for driveway
-        
-        modi.turnLeft();
-        
-            
-        //if driveway
+        //make sure there is complete loop
         while (modi.frontIsClear()) {
+            //start by making the robot move one and tun left
             modi.move();
-        }else{
-                if(!modi.frontIsClear)
+            modi.turnLeft();
 
-                    modi.turnLeft();
-                    modi.turnLeft();
-                    modi.turnLeft();
-                    modi.move();
-    }else{
-            if (modi.canPickThing()) {
-                modi.pickThing();
+            //if driveway then move in and clear it
+            while (modi.frontIsClear()) {
+                if (modi.canPickThing()) {
+                    modi.pickThing();
+                }
+                modi.move();
             }
-                if (!modi.frontIsClear()) {
+            //if front is blocked
+            if (!modi.frontIsClear()) {
+                //make sure robot picks things at the end of the wall
+                if (modi.canPickThing()) {
+                    modi.pickThing();
+                }
+                //get the direction and move until west
+                while (modi.getDirection() != Direction.WEST) {
                     modi.turnLeft();
                 }
-                    modi.turnLeft();
-                    modi.turnLeft();
+                //go back to sidewalk
+                while (modi.getAvenue() != 0) {
                     modi.move();
-                
-                    if (!modi.frontIsClear()) {
-                        modi.turnLeft();
-                    }
 
-    
-                    }else{
-                if (!modi.frontIsClear()) {
-            modi.turnLeft();
 
-            modi.turnLeft();
+                }
+                //turn let facing sidewalk
+                modi.turnLeft();
+                //create loop at the beginning
+            }
         }
+        //put down all the things picked up
+        modi.putThing();
     }
 }
-
-
-
-    
-
-

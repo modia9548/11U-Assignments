@@ -20,7 +20,7 @@ public class A2Q3 {
     public static void main(String[] args) {
         //create the city and robot
         City aakash = new City();
-        Robot modi = new Robot(aakash, 57, 26, Direction.WEST);
+        Robot modi = new Robot(aakash, 33, 26, Direction.WEST);
         //make sure the robot is facing south
         while(modi.getDirection()!=Direction.NORTH){
             modi.turnLeft();
