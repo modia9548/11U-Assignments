@@ -79,7 +79,7 @@ public class A2Q5 {
         //create algorithm for robot to follow
         //make sure there is complete loop
         while (modi.frontIsClear()) {
-            //start by making the robot move one and tun left
+            //start by making the robot move one and turn left
             modi.move();
             modi.turnLeft();
 
@@ -106,7 +106,7 @@ public class A2Q5 {
 
 
                 }
-                //turn let facing sidewalk
+                //turn left facing sidewalk south
                 modi.turnLeft();
                 //create loop at the beginning
             }

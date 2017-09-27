@@ -46,19 +46,23 @@ public class A2Q2 {
             if (modi.frontIsClear()) {
                 modi.move();
             } else {
-                modi.turnLeft();
-                modi.move();
-                modi.turnLeft();
-                modi.turnLeft();
-                modi.turnLeft();
-                modi.move();
-                modi.turnLeft();
-                modi.turnLeft();
-                modi.turnLeft();
-                modi.move();
-                modi.turnLeft();
+                //make robot move around walls if detected
             }
 
-
+            modi.turnLeft();
+            modi.move();
+            modi.turnLeft();
+            modi.turnLeft();
+            modi.turnLeft();
+            modi.move();
+            modi.turnLeft();
+            modi.turnLeft();
+            modi.turnLeft();
+            modi.move();
+            modi.turnLeft();
+            //utilise loop to keep following instructions
         }
+
+
     }
+}

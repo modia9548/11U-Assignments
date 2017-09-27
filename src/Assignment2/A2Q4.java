@@ -49,6 +49,7 @@ public class A2Q4 {
         new Wall(aakash,4,1,Direction.NORTH);
         new Wall(aakash,4,1,Direction.WEST);
         //create an algorithm so that the robot can move around the castle
+        //complete one side of robot moving then create loop
         while(modi.frontIsClear()){
             modi.move();
             modi.move();
