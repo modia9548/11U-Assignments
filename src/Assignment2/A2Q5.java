@@ -103,8 +103,6 @@ public class A2Q5 {
                 //go back to sidewalk
                 while (modi.getAvenue() != 0) {
                     modi.move();
-
-
                 }
                 //turn left facing sidewalk south
                 modi.turnLeft();
