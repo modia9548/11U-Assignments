@@ -35,15 +35,17 @@ public class A2Q1 {
         new Thing(aakash, 1, 9);
         new Thing(aakash, 1, 10);
         new Thing(aakash, 1, 11);
-        //make the robot pick the things up, but when he picks up 7 things, he moves three steps
+        
 
         modi.move();
         while (modi.canPickThing()) {
             if (modi.countThingsInBackpack() >= 7) {
+                // if robot carrying 7 items, go past next 3 items and dont pick them up
                 modi.move();
                 modi.move();
                 modi.move();
             } else {
+                //make the robot pick the things up until it gets 7 items
                 modi.pickThing();
                 modi.move();
                 
