@@ -19,9 +19,9 @@ public class A2Q5 {
     public static void main(String[] args) {
 
         //create the city
-        //create the city
+        
         City aakash = new City();
-        //create the robot guard
+        //create the robot 
         Robot modi = new Robot(aakash, 0, 0, Direction.SOUTH);
         //create the driveway
         new Wall(aakash, 0, 0, Direction.EAST);
