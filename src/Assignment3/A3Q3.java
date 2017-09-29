@@ -28,7 +28,9 @@ public class A3Q3 {
        
         if(modi.countThingsInBackpack() > 0){
             modi.putThing();
-            if(modi.countSteps)
+        int stepCounter = 0;
+        while(stepCounter<5);
+        stepCounter = stepCounter + 1;
             modi.move();            
         }
                 
