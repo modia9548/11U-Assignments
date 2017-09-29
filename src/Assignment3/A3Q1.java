@@ -25,9 +25,20 @@ public class A3Q1 {
         new Wall(aakash,1,2,Direction.NORTH);
         new Wall(aakash,1,1,Direction.NORTH);
         new Wall(aakash,2,2,Direction.SOUTH);       
-        new Wall(aakash,1,2,Direction.EAST);
-        new Wall(aakash,2,2,Direction.SOUTH);
+        new Wall(aakash,1,2,Direction.EAST);        
         new Wall(aakash,2,2,Direction.EAST);
-        
+        new Wall(aakash,1,1,Direction.WEST);
+        new Wall(aakash,2,1,Direction.SOUTH);
+        new Wall(aakash,2,1,Direction.WEST);
+         //create a move counting variable
+        int moveCounter = 0;
+        //continue when counter is less than 8
+        while(moveCounter < 8){
+            modi.move();
+            modi.move();
+            modi.turnLeft();
+            modi.move();
+            moveCounter=moveCounter + 1;
+        }
     }
 }
