@@ -18,21 +18,38 @@ public class A3Q3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         //create city and robot
+        //create city and robot
         City aakash = new City();
-        Robot modi = new Robot(aakash, 1, 1, Direction.EAST,20);
-        //make it put down 4 rows of the objects
-        int putThingCounter = 0;
-        while(putThingCounter<4);
-        putThingCounter = putThingCounter + 1;
-       
-        if(modi.countThingsInBackpack() > 0){
-            modi.putThing();
-        int stepCounter = 0;
-        while(stepCounter<5);
-        stepCounter = stepCounter + 1;
-            modi.move();            
+        Robot modi = new Robot(aakash, 1, 1, Direction.EAST, 20);
+        //make it continue task until street 5 is reached
+        while (modi.getStreet() != 5) {
+            int putThingCounter = 0;
+            //make it put down 4 rows of the objects
+            while (putThingCounter < 5) {
+                putThingCounter = putThingCounter + 1;
+
+                if (modi.countThingsInBackpack() > 0) {
+                    modi.putThing();
+                    //make it count the steps until it goes 5 spaces
+
+
+                    modi.move();
+
+                }
+            }
+
+            //return back to origin avenue
+            modi.turnLeft();
+            modi.turnLeft();
+            while (modi.getAvenue() != 1) {
+                modi.move();
+            }
+            modi.turnLeft();
+            modi.move();
+            modi.turnLeft();
+
+
         }
-                
+
     }
 }
