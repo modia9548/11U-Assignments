@@ -44,6 +44,7 @@ public class A3Q3 {
             while (modi.getAvenue() != 1) {
                 modi.move();
             }
+            //move to face towards next row
             modi.turnLeft();
             modi.move();
             modi.turnLeft();
