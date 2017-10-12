@@ -46,47 +46,22 @@ public class Quiz1 {
         new Thing(aakash, 1, 5);
         new Thing(aakash, 1, 6);
 
-        //tell the robot to move if able to
+        modi.move();
         while (modi.frontIsClear()) {
             modi.move();
-            
-            
-            //when the robot cannot pick something, move forward
-            while (!modi.canPickThing()) {
-                modi.move();
-                
-                
-            }
-            //pick thing up if can
+
+
             if (modi.canPickThing()) {
                 modi.pickThing();
             }
-            //return to origin
-            modi.turnLeft();
-            modi.turnLeft();
-            while (modi.getAvenue() != 0) {
-                modi.move();
-            }
-
-            
-            //put thing then turn around
-            
-            modi.putThing();
-            
-            modi.turnLeft();
-            modi.turnLeft();
-
-        } 
-        //if front is not clear, go back to origin
-        modi.turnLeft();
-        modi.turnLeft();
-        
-        while (modi.getAvenue() != 0) {
-            modi.move();
-           
         }
         modi.turnLeft();
         modi.turnLeft();
+        while (modi.getAvenue() != 0) {
+            modi.move();
+        }
+        modi.turnLeft();
+        modi.turnLeft();
+        modi.putThing();
     }
-    
 }
