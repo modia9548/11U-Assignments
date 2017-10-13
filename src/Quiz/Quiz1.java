@@ -46,22 +46,32 @@ public class Quiz1 {
         new Thing(aakash, 1, 5);
         new Thing(aakash, 1, 6);
 
-        modi.move();
-        while (modi.frontIsClear()) {
-            modi.move();
-
-
-            if (modi.canPickThing()) {
-                modi.pickThing();
-            }
-        }
-        modi.turnLeft();
-        modi.turnLeft();
-        while (modi.getAvenue() != 0) {
-            modi.move();
-        }
-        modi.turnLeft();
-        modi.turnLeft();
-        modi.putThing();
+       while (modi.frontIsClear()){
+           modi.move();
+           
+           if (modi.canPickThing()){
+               modi.pickThing();
+               modi.turnLeft();
+               modi.turnLeft();
+               while (modi.getAvenue() != 0) {
+                   modi.move();
+               }
+               modi.putThing();
+               modi.turnLeft();
+               modi.turnLeft();
+           }else{
+               if (!modi.frontIsClear()){
+                   modi.turnLeft();
+                   modi.turnLeft();
+                    while (modi.getAvenue() != 0) {
+                   modi.move();
+                   
+                   
+               }
+           }
+       }
+          
     }
+       modi.turnLeft();
+       modi.turnLeft();
 }
