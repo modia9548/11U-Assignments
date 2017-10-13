@@ -32,6 +32,7 @@ public class Quiz1 {
 
         new Wall(aakash, 1, 4, Direction.NORTH);
         new Wall(aakash, 1, 4, Direction.SOUTH);
+         
 
         new Wall(aakash, 1, 5, Direction.NORTH);
         new Wall(aakash, 1, 5, Direction.SOUTH);
@@ -46,32 +47,42 @@ public class Quiz1 {
         new Thing(aakash, 1, 5);
         new Thing(aakash, 1, 6);
 
-       while (modi.frontIsClear()){
-           modi.move();
-           
-           if (modi.canPickThing()){
-               modi.pickThing();
-               modi.turnLeft();
-               modi.turnLeft();
-               while (modi.getAvenue() != 0) {
-                   modi.move();
-               }
-               modi.putThing();
-               modi.turnLeft();
-               modi.turnLeft();
-           }else{
-               if (!modi.frontIsClear()){
-                   modi.turnLeft();
-                   modi.turnLeft();
+    // get robot to move as long as front is clear
+        while (modi.frontIsClear()) {
+            modi.move();
+
+    //pick thing if can
+            if (modi.canPickThing()) {
+                modi.pickThing();
+                modi.turnLeft();
+                modi.turnLeft();
+
+                //return to origin avenue
+                while (modi.getAvenue() != 0) {
+                    modi.move();
+                }
+                modi.putThing();
+                modi.turnLeft();
+                modi.turnLeft();
+            } else {
+
+                //if front blocked
+                if (!modi.frontIsClear()) {
+                    modi.turnLeft();
+                    modi.turnLeft();
+
+                    //return to origin
                     while (modi.getAvenue() != 0) {
-                   modi.move();
-                   
-                   
-               }
-           }
-       }
-          
+                        modi.move();
+
+
+                    }
+                }
+            }
+
+        }
+        //turn towards facing East (origin spot)
+        modi.turnLeft();
+        modi.turnLeft();
     }
-       modi.turnLeft();
-       modi.turnLeft();
 }
