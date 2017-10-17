@@ -19,11 +19,33 @@ public class A4Q7 {
         Scanner input = new Scanner(System.in);
         int win = 1;
         while (win < 100) {
+            System.out.println(win);
+            System.out.println("Choose a number between 2 and 12");
             int score = input.nextInt();
-            System.out.println("Choose a number between 1 and 12");
-            score = score;
-        
-        win = score;
+
+            win = score + win;
+            if (win == 54) {
+                win = 19;
+            }
+            if (win == 90) {
+                win = 48;
+            }
+            if (win == 99) {
+                win = 77;
+            }
+            if (win == 9) {
+                win = 34;
+            }
+            if (win == 40) {
+                win = 64;
+            }
+            if (win == 67) {
+                win = 86;
+            }
+        }
+
+        if (win >= 100) {
+            System.out.println("Congratulations, you won!");
         }
     }
 }
