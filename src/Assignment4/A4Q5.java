@@ -67,7 +67,7 @@ public class A4Q5 {
                 + "test 5: " + percentage5 + "%");
         
         //write the average
-        double totalPercentage = percentage1 + percentage2 + percentage3 + percentage4 + percentage5
+        double totalPercentage = percentage1 + percentage2 + percentage3 + percentage4 + percentage5;
         double average = totalPercentage /5;
         System.out.println("Average: " + average + "%" );
     }

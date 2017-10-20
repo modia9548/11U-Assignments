@@ -18,10 +18,12 @@ public class A4Q7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int win = 1;
+        //end game when 100 is reached
         while (win < 100) {
             System.out.println(win);
             System.out.println("Choose a number between 2 and 12");
             int score = input.nextInt();
+            // get user to choose numbers then have computer to add up 
 
             win = score + win;
             if (win == 54) {

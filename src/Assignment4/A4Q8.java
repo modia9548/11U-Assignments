@@ -98,6 +98,7 @@ Scanner input = new Scanner(System.in);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //say hello + name written out form user input
         String text = Karel.getText();
         helloKarel.setText("Hello " + text);
         
@@ -148,7 +149,7 @@ Scanner input = new Scanner(System.in);
                 new A4Q8().setVisible(true);
             }
         });
-        String name= name.getText();
+        
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Karel;
