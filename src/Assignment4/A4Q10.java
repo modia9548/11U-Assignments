@@ -121,15 +121,20 @@ public class A4Q10 extends javax.swing.JFrame {
     }//GEN-LAST:event_farenheitActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-String text = celsius.getText();
+// convert celsius to farenheit
+        String text = celsius.getText();
+        //get number to go into text box
         int answer = Integer.parseInt(text);
+        //multiply by 33.8
         double convert = answer * 33.8;
         farenheit.setText(String.valueOf(convert));       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // convert farenheit to celsius 
         String text = farenheit.getText();
         double answer = Double.parseDouble(text);
+        //divide by 33.8
         double convert = answer / 33.8;
         celsius.setText(String.valueOf(convert));
     }//GEN-LAST:event_jButton2ActionPerformed
