@@ -20,7 +20,7 @@ public class Strings {
         //eg if in the 4th spot is there the letter e
         if (s.charFit(4) == "e") //replace letter
         {
-            String 
+           
         }
         news = s.replace ("e","3");
         //replace first letter
