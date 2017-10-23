@@ -23,32 +23,32 @@ public class A4Q5 {
         System.out.println("What mark did you get? ");
         double mark1 = input.nextInt();
         //calculate the percentage mark
-        double percentage1 = mark1/ test1*100;
+        double percentage1 = mark1 / test1 * 100;
 
 
         System.out.println("What was the second test out of? ");
         double test2 = input.nextDouble();
         System.out.println("What mark did you get? ");
         double mark2 = input.nextDouble();
-        double percentage2 = mark2 / test2*100;
+        double percentage2 = mark2 / test2 * 100;
 
         System.out.println("What was the third test out of? ");
         double test3 = input.nextDouble();
         System.out.println("What mark did you get? ");
         double mark3 = input.nextDouble();
-        double percentage3 = mark3 / test3*100;
+        double percentage3 = mark3 / test3 * 100;
 
         System.out.println("What was the fourth test out of?");
         double test4 = input.nextDouble();
         System.out.println("What mark did you get? ");
         double mark4 = input.nextDouble();
-        double percentage4 = mark4 / test4*100;
+        double percentage4 = mark4 / test4 * 100;
 
         System.out.println("What was the fifth test out of?");
         double test5 = input.nextDouble();
         System.out.println("What mark did you get? ");
         double mark5 = input.nextDouble();
-        double percentage5 = mark5 / test5*100;
+        double percentage5 = mark5 / test5 * 100;
 
         //write the test scores
         System.out.println("Test scores for Doug "
@@ -65,10 +65,10 @@ public class A4Q5 {
 
         System.out.println("Test scores for Doug "
                 + "test 5: " + percentage5 + "%");
-        
+
         //write the average
         double totalPercentage = percentage1 + percentage2 + percentage3 + percentage4 + percentage5;
-        double average = totalPercentage /5;
-        System.out.println("Average: " + average + "%" );
+        double average = totalPercentage / 5;
+        System.out.println("Average: " + average + "%");
     }
 }

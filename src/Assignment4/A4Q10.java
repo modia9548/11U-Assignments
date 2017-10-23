@@ -113,11 +113,9 @@ public class A4Q10 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void celsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celsiusActionPerformed
-        
     }//GEN-LAST:event_celsiusActionPerformed
 
     private void farenheitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farenheitActionPerformed
-       
     }//GEN-LAST:event_farenheitActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -127,7 +125,7 @@ public class A4Q10 extends javax.swing.JFrame {
         int answer = Integer.parseInt(text);
         //multiply by 33.8
         double convert = answer * 33.8;
-        farenheit.setText(String.valueOf(convert));       
+        farenheit.setText(String.valueOf(convert));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

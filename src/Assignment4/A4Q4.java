@@ -42,15 +42,15 @@ public class A4Q4 {
         //get the number
         int miscellaneous = input.nextInt();
         //get integer for all costs
-        double cost= miscellaneous + staff + decorations + hall + dj + food;
-        
+        double cost = miscellaneous + staff + decorations + hall + dj + food;
+
         //get number needed to break even cost and full cost
         //Math.ceil allows decimal to always round up
         //math.floor
         //math.round
-        double tickets = Math.ceil(cost/35.0);
-        
-        
+        double tickets = Math.ceil(cost / 35.0);
+
+
         System.out.println("The total cost is $" + cost + ". You will need to sell " + tickets + " tickets to break even");
     }
 }

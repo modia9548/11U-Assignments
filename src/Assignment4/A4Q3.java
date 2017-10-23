@@ -18,7 +18,7 @@ public class A4Q3 {
     public static void main(String[] args) {
         //create a scanner for input
         Scanner input = new Scanner(System.in);
-        
+
         // tell user to give 1st number
         System.out.println("Please enter your first number");
         //get the number
@@ -35,7 +35,7 @@ public class A4Q3 {
         System.out.println("Please enter your fourth number");
         //get the number
         int number4 = input.nextInt();
-        
+
         System.out.println(number1 + "," + number2 + "," + number3 + "," + number4);
     }
 }

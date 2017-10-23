@@ -142,12 +142,11 @@ public class A4Q9 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void number3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number3ActionPerformed
-       
     }//GEN-LAST:event_number3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-String text = number1.getText();
-String text2 = number2.getText();
+        String text = number1.getText();
+        String text2 = number2.getText();
         int answer = Integer.parseInt(text);
         int answer2 = Integer.parseInt(text2);
         int sum = answer + answer2;
@@ -156,8 +155,8 @@ String text2 = number2.getText();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       String text = number1.getText();
-String text2 = number2.getText();
+        String text = number1.getText();
+        String text2 = number2.getText();
         int answer = Integer.parseInt(text);
         int answer2 = Integer.parseInt(text2);
         int difference = answer - answer2;
@@ -166,8 +165,8 @@ String text2 = number2.getText();
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-       String text = number1.getText();
-String text2 = number2.getText();
+        String text = number1.getText();
+        String text2 = number2.getText();
         int answer = Integer.parseInt(text);
         int answer2 = Integer.parseInt(text2);
         int multiply = answer * answer2;
@@ -176,8 +175,10 @@ String text2 = number2.getText();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
         String text = number1.getText();
-String text2 = number2.getText();
+        String text2 = number2.getText();
+//put both inputs together
         int answer = Integer.parseInt(text);
         int answer2 = Integer.parseInt(text2);
         int divide = answer / answer2;

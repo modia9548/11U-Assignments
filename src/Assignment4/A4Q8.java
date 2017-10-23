@@ -11,7 +11,8 @@ import java.util.Scanner;
  * @author modia9548
  */
 public class A4Q8 extends javax.swing.JFrame {
-Scanner input = new Scanner(System.in);
+
+    Scanner input = new Scanner(System.in);
 
     /**
      * Creates new form A4Q8
@@ -101,7 +102,7 @@ Scanner input = new Scanner(System.in);
         //say hello + name written out form user input
         String text = Karel.getText();
         helloKarel.setText("Hello " + text);
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -109,11 +110,9 @@ Scanner input = new Scanner(System.in);
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void KarelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KarelActionPerformed
-        
     }//GEN-LAST:event_KarelActionPerformed
 
     private void helloKarelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helloKarelActionPerformed
-       
     }//GEN-LAST:event_helloKarelActionPerformed
 
     /**
@@ -149,7 +148,7 @@ Scanner input = new Scanner(System.in);
                 new A4Q8().setVisible(true);
             }
         });
-        
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Karel;
