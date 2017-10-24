@@ -4,6 +4,8 @@
  */
 package Examples;
 
+import java.util.Scanner;
+
 /**
  *
  * @author modia9548
@@ -37,4 +39,9 @@ public class String2 {
     }
         //research regular expressions
     }
+    //where can you find letter e
+    int e = word.indexOf("i", 2);
+    
+    StringBuilder = new StringBuilder()
+            
 }
