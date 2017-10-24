@@ -20,21 +20,21 @@ public class A5Q1 {
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter a word");
         String word = input.nextLine();
-        
+
         //find the first vowel in the word
-        for(int i = 0; i < word.length(); i++){
-            if(word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i'|| word.charAt(i) == 'o' 
-                    || word.charAt(i) == 'u'){
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o'
+                    || word.charAt(i) == 'u') {
                 String front = word.substring(0, i);
                 String ending = word.substring(i);
-                
-            
-        
-        //add ub before the vowel and continue the word
-        String translated = front + "ub" + ending;
-        //if there are two vowels together, add ub only to the first vowel
-        System.out.println(word + " in Ubbi Dubbi is " + translated);
-        break;
+
+
+
+                //add ub before the vowel and continue the word
+                String translated = front + "ub" + ending;
+                //if there are two vowels together, add ub only to the first vowel
+                System.out.println(word + " in Ubbi Dubbi is " + translated);
+
             }
         }
     }
