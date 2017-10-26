@@ -19,7 +19,7 @@ public class A2Q5 {
     public static void main(String[] args) {
 
         //create the city
-        
+
         City aakash = new City();
         //create the robot 
         Robot modi = new Robot(aakash, 0, 0, Direction.SOUTH);

@@ -35,7 +35,7 @@ public class A2Q1 {
         new Thing(aakash, 1, 9);
         new Thing(aakash, 1, 10);
         new Thing(aakash, 1, 11);
-        
+
 
         modi.move();
         while (modi.canPickThing()) {
@@ -48,7 +48,7 @@ public class A2Q1 {
                 //make the robot pick the things up until it gets 7 items
                 modi.pickThing();
                 modi.move();
-                
+
             }
         }
     }

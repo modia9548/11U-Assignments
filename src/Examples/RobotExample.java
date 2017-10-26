@@ -1,6 +1,5 @@
 package Examples;
 
-
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
@@ -12,12 +11,12 @@ import java.awt.Color;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Aakash Modi
  */
 public class RobotExample {
+
     private static String T;
 
     /**
@@ -26,31 +25,31 @@ public class RobotExample {
     public static void main(String[] args) {
         // create a new city called kitchener
         City kitchener = new City();
-        
+
         // create a robot
-        Robot karel = new Robot(kitchener,3,2,Direction.EAST);
+        Robot karel = new Robot(kitchener, 3, 2, Direction.EAST);
         //create a second robot name tina
-        Robot tina = new Robot(kitchener,3,5,Direction.WEST);
-        
-        new Wall(kitchener,3,2,Direction.NORTH);
-        
+        Robot tina = new Robot(kitchener, 3, 5, Direction.WEST);
+
+        new Wall(kitchener, 3, 2, Direction.NORTH);
+
         tina.setLabel("T");
-        
-        new Thing(kitchener,3,3);
-        
-         tina.setColor(Color.CYAN);
+
+        new Thing(kitchener, 3, 3);
+
+        tina.setColor(Color.CYAN);
         //get karel to move
-       karel.move();
-       //move to thing, have karel pick up thing
-       karel.pickThing();
-       karel.move();
-       //get karel to turn left
-       karel.turnLeft();
-       karel.move();
-       karel.move();
-       karel.move();
-       karel.move();
-       karel.move();
+        karel.move();
+        //move to thing, have karel pick up thing
+        karel.pickThing();
+        karel.move();
+        //get karel to turn left
+        karel.turnLeft();
+        karel.move();
+        karel.move();
+        karel.move();
+        karel.move();
+        karel.move();
         karel.turnLeft();
         karel.move();
         karel.move();
@@ -166,10 +165,10 @@ public class RobotExample {
         tina.move();
         tina.move();
         tina.move();
-         tina.move();
-          tina.move();
+        tina.move();
+        tina.move();
         tina.putThing();
-         tina.move();
-        
+        tina.move();
+
     }
 }

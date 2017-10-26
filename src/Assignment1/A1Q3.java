@@ -23,19 +23,19 @@ public class A1Q3 {
         // create city
         City aakash = new City();
         //create robot and place him in the city
-        Robot modi = new Robot(aakash,5,5,Direction.EAST);
+        Robot modi = new Robot(aakash, 5, 5, Direction.EAST);
         //create thing (flag)
-        new Thing(aakash,5,6);
+        new Thing(aakash, 5, 6);
         //create "mountain"
-        new Wall(aakash,5,7,Direction.WEST);
-        new Wall(aakash,5,7,Direction.NORTH);
-        new Wall(aakash,4,8,Direction.WEST);
-        new Wall(aakash,3,8,Direction.WEST);
-        new Wall(aakash,3,8,Direction.NORTH);
-        new Wall(aakash,3,8,Direction.EAST);
-        new Wall(aakash,4,9,Direction.NORTH);
-        new Wall(aakash,4,9,Direction.EAST);
-        new Wall(aakash,5,9,Direction.EAST);
+        new Wall(aakash, 5, 7, Direction.WEST);
+        new Wall(aakash, 5, 7, Direction.NORTH);
+        new Wall(aakash, 4, 8, Direction.WEST);
+        new Wall(aakash, 3, 8, Direction.WEST);
+        new Wall(aakash, 3, 8, Direction.NORTH);
+        new Wall(aakash, 3, 8, Direction.EAST);
+        new Wall(aakash, 4, 9, Direction.NORTH);
+        new Wall(aakash, 4, 9, Direction.EAST);
+        new Wall(aakash, 5, 9, Direction.EAST);
         //modi climbs to the top of the mountain to plant the flag
         modi.move();
         modi.pickThing();
@@ -68,8 +68,8 @@ public class A1Q3 {
         modi.move();
         modi.move();
         modi.turnLeft();
-        
-        
-        
+
+
+
     }
 }

@@ -32,7 +32,7 @@ public class Quiz1 {
 
         new Wall(aakash, 1, 4, Direction.NORTH);
         new Wall(aakash, 1, 4, Direction.SOUTH);
-         
+
 
         new Wall(aakash, 1, 5, Direction.NORTH);
         new Wall(aakash, 1, 5, Direction.SOUTH);
@@ -47,11 +47,11 @@ public class Quiz1 {
         new Thing(aakash, 1, 5);
         new Thing(aakash, 1, 6);
 
-    // get robot to move as long as front is clear
+        // get robot to move as long as front is clear
         while (modi.frontIsClear()) {
             modi.move();
 
-    //pick thing if can
+            //pick thing if can
             if (modi.canPickThing()) {
                 modi.pickThing();
                 modi.turnLeft();

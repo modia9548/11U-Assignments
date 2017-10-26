@@ -39,6 +39,12 @@ public class A4Q9 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        number1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                number1ActionPerformed(evt);
+            }
+        });
+
         number3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number3ActionPerformed(evt);
@@ -184,6 +190,10 @@ public class A4Q9 extends javax.swing.JFrame {
         int divide = answer / answer2;
         number3.setText(String.valueOf(divide));
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void number1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_number1ActionPerformed
 
     /**
      * @param args the command line arguments

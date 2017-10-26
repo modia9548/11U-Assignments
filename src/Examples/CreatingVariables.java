@@ -1,6 +1,5 @@
 package Examples;
 
-
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
@@ -24,7 +23,7 @@ public class CreatingVariables {
         //create a move counting variable
         int moveCounter = 0;
         //continue when counter is less than 10
-        while(moveCounter < 10){
+        while (moveCounter < 10) {
             //move forward
             modi.move();
             //add 1 to move counter
@@ -33,7 +32,7 @@ public class CreatingVariables {
         modi.turnLeft();
         modi.turnLeft();
         //counted for loop
-        for(int count = 0; count <10; count = count + 1){
+        for (int count = 0; count < 10; count = count + 1) {
             //move the robot
             modi.move();
         }

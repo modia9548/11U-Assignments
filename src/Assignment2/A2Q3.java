@@ -22,22 +22,22 @@ public class A2Q3 {
         City aakash = new City();
         Robot modi = new Robot(aakash, 33, 26, Direction.WEST);
         //make sure the robot is facing south
-        while(modi.getDirection()!=Direction.NORTH){
+        while (modi.getDirection() != Direction.NORTH) {
             modi.turnLeft();
         }
-       //get the robot to keep moving until it reaches street 0 
-        while(modi.getStreet() != 0){
+        //get the robot to keep moving until it reaches street 0 
+        while (modi.getStreet() != 0) {
             modi.move();
-            
+
         }
-    
+
         modi.turnLeft();
         //get the robot to keep moving until it reaches avenue 0
-        while(modi.getAvenue() != 0){
+        while (modi.getAvenue() != 0) {
             modi.move();
         }
-        
-        
-        
+
+
+
     }
 }

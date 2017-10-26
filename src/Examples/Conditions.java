@@ -1,6 +1,5 @@
 package Examples;
 
-
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
@@ -27,7 +26,7 @@ public class Conditions {
         Robot modi = new Robot(Aakash, 2, 1, Direction.EAST);
         //create a wall
         new Wall(Aakash, 2, 1, Direction.EAST);
-        new Wall(Aakash,1,9,Direction.WEST);
+        new Wall(Aakash, 1, 9, Direction.WEST);
         //check if front is clear
         if (modi.frontIsClear()) {
             modi.move();
@@ -35,18 +34,18 @@ public class Conditions {
         } else {
             modi.turnLeft();
             modi.getStreet();
-           
-         
+
+
             modi.move();
             modi.turnLeft();
             modi.turnLeft();
             modi.turnLeft();
-            
+
             //move until the wall
-            while(modi.frontIsClear()){
-             modi.move();
+            while (modi.frontIsClear()) {
+                modi.move();
             }
-     
+
         }
     }
 }

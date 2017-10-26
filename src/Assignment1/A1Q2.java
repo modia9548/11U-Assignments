@@ -23,17 +23,17 @@ public class A1Q2 {
         // create city
         City aakash = new City();
         //create robot and place him in the city
-        Robot modi = new Robot(aakash,5,5,Direction.SOUTH);
+        Robot modi = new Robot(aakash, 5, 5, Direction.SOUTH);
         //create the "newspaper" for your robot to pick up
-        new Thing (aakash,6,5);
+        new Thing(aakash, 6, 5);
         //create modi's house using walls
-        new Wall(aakash,5,5,Direction.SOUTH);
-        new Wall(aakash,5,5,Direction.EAST);
-        new Wall(aakash,5,5,Direction.NORTH);
-        new Wall(aakash,5,4,Direction.NORTH);
-        new Wall(aakash,5,4,Direction.WEST);
-        new Wall(aakash,6,4,Direction.WEST);
-        new Wall(aakash,6,4,Direction.SOUTH);
+        new Wall(aakash, 5, 5, Direction.SOUTH);
+        new Wall(aakash, 5, 5, Direction.EAST);
+        new Wall(aakash, 5, 5, Direction.NORTH);
+        new Wall(aakash, 5, 4, Direction.NORTH);
+        new Wall(aakash, 5, 4, Direction.WEST);
+        new Wall(aakash, 6, 4, Direction.WEST);
+        new Wall(aakash, 6, 4, Direction.SOUTH);
         //get modi to pick up the newspaper
         modi.turnLeft();
         modi.turnLeft();

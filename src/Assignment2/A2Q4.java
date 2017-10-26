@@ -20,37 +20,37 @@ public class A2Q4 {
      */
     public static void main(String[] args) {
         //create the city
-        City aakash=new City();
+        City aakash = new City();
         //create the robot guard
-        Robot modi=new Robot(aakash,0,0,Direction.EAST);
+        Robot modi = new Robot(aakash, 0, 0, Direction.EAST);
         //create the castle
-        new Wall(aakash,2,2,Direction.WEST);
-        new Wall(aakash,2,2,Direction.NORTH);
-        new Wall(aakash,2,3,Direction.NORTH);
-        new Wall(aakash,2,3,Direction.EAST);
-        new Wall(aakash,3,3,Direction.EAST);
-        new Wall(aakash,3,3,Direction.SOUTH);
-        new Wall(aakash,3,2,Direction.WEST);
-        new Wall(aakash,3,2,Direction.SOUTH);
-        new Wall(aakash,1,1,Direction.WEST);
-        new Wall(aakash,1,1,Direction.SOUTH);
-        new Wall(aakash,1,1,Direction.NORTH);
-        new Wall(aakash,1,1,Direction.EAST);
-        new Wall(aakash,1,4,Direction.EAST);
-        new Wall(aakash,1,4,Direction.NORTH);
-        new Wall(aakash,1,4,Direction.WEST);
-        new Wall(aakash,1,4,Direction.SOUTH);
-        new Wall(aakash,4,4,Direction.EAST);
-        new Wall(aakash,4,4,Direction.SOUTH);
-        new Wall(aakash,4,4,Direction.NORTH);
-        new Wall(aakash,4,4,Direction.WEST);
-        new Wall(aakash,4,1,Direction.EAST);
-        new Wall(aakash,4,1,Direction.SOUTH);
-        new Wall(aakash,4,1,Direction.NORTH);
-        new Wall(aakash,4,1,Direction.WEST);
+        new Wall(aakash, 2, 2, Direction.WEST);
+        new Wall(aakash, 2, 2, Direction.NORTH);
+        new Wall(aakash, 2, 3, Direction.NORTH);
+        new Wall(aakash, 2, 3, Direction.EAST);
+        new Wall(aakash, 3, 3, Direction.EAST);
+        new Wall(aakash, 3, 3, Direction.SOUTH);
+        new Wall(aakash, 3, 2, Direction.WEST);
+        new Wall(aakash, 3, 2, Direction.SOUTH);
+        new Wall(aakash, 1, 1, Direction.WEST);
+        new Wall(aakash, 1, 1, Direction.SOUTH);
+        new Wall(aakash, 1, 1, Direction.NORTH);
+        new Wall(aakash, 1, 1, Direction.EAST);
+        new Wall(aakash, 1, 4, Direction.EAST);
+        new Wall(aakash, 1, 4, Direction.NORTH);
+        new Wall(aakash, 1, 4, Direction.WEST);
+        new Wall(aakash, 1, 4, Direction.SOUTH);
+        new Wall(aakash, 4, 4, Direction.EAST);
+        new Wall(aakash, 4, 4, Direction.SOUTH);
+        new Wall(aakash, 4, 4, Direction.NORTH);
+        new Wall(aakash, 4, 4, Direction.WEST);
+        new Wall(aakash, 4, 1, Direction.EAST);
+        new Wall(aakash, 4, 1, Direction.SOUTH);
+        new Wall(aakash, 4, 1, Direction.NORTH);
+        new Wall(aakash, 4, 1, Direction.WEST);
         //create an algorithm so that the robot can move around the castle
         //complete one side of robot moving then create loop
-        while(modi.frontIsClear()){
+        while (modi.frontIsClear()) {
             modi.move();
             modi.move();
             modi.turnLeft();

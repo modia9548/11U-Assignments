@@ -35,25 +35,24 @@ public class A3Q2 {
         //create pick counter for 10
 
         int pickThingCounter = 0;
-        while (pickThingCounter < 1) 
-            //robot moves and drops off thing
+        while (pickThingCounter < 1) //robot moves and drops off thing
         {
             pickThingCounter = pickThingCounter + 1;
             while (modi.canPickThing()) {
                 modi.pickThing();
-            
 
+
+                modi.move();
+                modi.putThing();
+                //robot comes back
+                modi.turnLeft();
+                modi.turnLeft();
+                modi.move();
+                modi.turnLeft();
+                modi.turnLeft();
+            }
+            //robot repeats process until 10 things delivered
             modi.move();
-            modi.putThing();
-            //robot comes back
-            modi.turnLeft();
-            modi.turnLeft();
-            modi.move();
-            modi.turnLeft();
-            modi.turnLeft();
         }
-        //robot repeats process until 10 things delivered
-        modi.move();
     }
-}
 }
