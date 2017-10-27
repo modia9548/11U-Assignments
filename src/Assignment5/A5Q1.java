@@ -33,9 +33,14 @@ public class A5Q1 {
                 //add ub before the vowel and continue the word
                 String translated = front + "ub" + ending;
                 //if there are two vowels together, add ub only to the first vowel
-
+                if (word.charAt(i - 1) == 'a' || word.charAt(i - 1) == 'e' || word.charAt(i - 1) == 'i' || word.charAt(i - 1) == 'o'
+                    || word.charAt(i - 1) == 'u') {
+                    String front2 = word.substring(0, i - 1);
+                String ending2 = word.substring(i - 1);
                 //make the finishing sentence
                 System.out.println(word + " in Ubbi Dubbi is " + translated);
+                }
+                
 
             }
         }
