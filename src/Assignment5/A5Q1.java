@@ -28,12 +28,10 @@ public class A5Q1 {
             //get word
             Scanner letter2 = new Scanner(System.in);
 
-
             String letter = letter2.nextLine();
 
             //end program
             String ex = "EXIT";
-
 
 
             if (letter.equals(ex)) {
@@ -42,8 +40,6 @@ public class A5Q1 {
                 System.out.print("goodbye");
 
                 break;
-
-
 
             }
 
