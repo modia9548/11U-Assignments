@@ -16,34 +16,76 @@ public class A5Q1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //get user to input word
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please enter a word");
-        String word = input.nextLine();
 
-        //find the first vowel in the word
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o'
-                    || word.charAt(i) == 'u') {
-                String front = word.substring(0, i);
-                String ending = word.substring(i);
+        //start at 0
+        int a = 0;
+
+        //word>0
+        while (a < 1) {
+
+            System.out.print("Please enter your word: ");
+
+            //get word
+            Scanner letter2 = new Scanner(System.in);
+
+
+            String letter = letter2.nextLine();
+
+            //end program
+            String ex = "EXIT";
 
 
 
-                //add ub before the vowel and continue the word
-                String translated = front + "ub" + ending;
-                //if there are two vowels together, add ub only to the first vowel
-                if (word.charAt(i - 1) == 'a' || word.charAt(i - 1) == 'e' || word.charAt(i - 1) == 'i' || word.charAt(i - 1) == 'o'
-                    || word.charAt(i - 1) == 'u') {
-                    String front2 = word.substring(0, i - 1);
-                String ending2 = word.substring(i - 1);
-                //make the finishing sentence
-                System.out.println(word + " in Ubbi Dubbi is " + translated);
-                }
-                
+            if (letter.equals(ex)) {
+
+                //goodbye and end
+                System.out.print("goodbye");
+
+                break;
+
+
 
             }
+
+            //empty string
+            String translate = "";
+
+            Boolean foundvowel = false;
+
+            //vowel counter
+            for (int i = 0; i < letter.length(); i++) {
+
+                // look for a vowel at spot i 
+                if ((letter.charAt(i) == 'a' || letter.charAt(i) == 'e' || letter.charAt(i) == 'i' || letter.charAt(i) == 'o' || letter.charAt(i) == 'u') && foundvowel == false) {
+
+                    //add ub
+                    translate = translate + "ub";
+
+                    translate = translate + letter.charAt(i);
+
+                    foundvowel = true;
+
+                } else {
+
+                    //skip after 2 vowels
+                    if ((letter.charAt(i) == 'a' || letter.charAt(i) == 'e' || letter.charAt(i) == 'i' || letter.charAt(i) == 'o' || letter.charAt(i) == 'u') && foundvowel == true) {
+
+                        translate = translate + letter.charAt(i);
+
+                    } else {
+
+                        translate = translate + letter.charAt(i);
+
+                        foundvowel = false;
+
+                    }
+                }
+            }
+
+            System.out.print(translate);
+
+            a = a + 1;
+
         }
     }
-}
 }
