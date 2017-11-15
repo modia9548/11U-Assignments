@@ -18,18 +18,32 @@ public class A6Q1 {
     public static void main(String[] args) {
         //create a scanner
         Scanner input = new Scanner(System.in);
-        
+
         //ask how many students are in the class
         System.out.println("How many students are in the class?");
-        int numberOfStudents= input.nextInt();
-        //create a string to list all of the cost names
-        String[] markNames = new String[numberOfStudents];
-        // array to store marks
-        double[] marks = new double[numberOfStudents];
+        int numberOfStudents = input.nextInt();
+        //array to store number of students
+        double[] students = new double[numberOfStudents];
+
         //create integer to get all of the marks
-        System.out.println("What were the marks of student");
-        int marksOfStudents = input.nextInt();
+        for (int i = 0; i < students.length; i++) {
+
+            System.out.println("What were the marks of student " + (i + 1));
+
+            int marksOfStudents = input.nextInt();
+
+            students[i] = marksOfStudents;
+        }
+        double total = 0;
+        for (int a = 0; a < students.length; a++) {
+
+            total = total + students[a];
+        }
         
+       double answer = Math.round(total*100/students)/100;
+       
         
+
+
     }
 }
