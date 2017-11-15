@@ -40,7 +40,8 @@ public class A6Q1 {
             total = total + students[a];
         }
         
-       double answer = Math.round(total*100/students)/100;
+       double answer = Math.round(total*100/numberOfStudents)/100;
+        System.out.println("The class average is " + answer + "%");
        
         
 
