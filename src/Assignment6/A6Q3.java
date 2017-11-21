@@ -19,22 +19,20 @@ public class A6Q3 {
 
         Scanner input = new Scanner(System.in);
 
-        //enter integer 1
-        System.out.println("Enter amount of integers ");
-        int integerAmount = input.nextInt();
-
         //array to store integers
-        double[] integer = new double[integerAmount];
-        
-        //create integer to get all of the integers
-        for (int i = 0; i < integer.length; i++) {
-            
-             System.out.println("What is integer " + (i + 1));
-             
-              int orderOfIntegers = input.nextInt();
+        double[] integer = new double[2];
 
-            integer[i] = orderOfIntegers;
-        }
-        double answer = 
+        //enter the integers
+        System.out.println("enter the two integers ");
+        integer[0] = input.nextInt();
+        integer[1] = input.nextInt();
+
+        if (integer[0] > integer[1]) {
+            int.tempNum= integer[0];
+            integer[0]= integer[1];
+            tempNum = integer[1];
+
+
+
     }
 }
