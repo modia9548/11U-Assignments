@@ -28,11 +28,11 @@ public class A6Q3 {
         integer[1] = input.nextInt();
 
         if (integer[0] > integer[1]) {
-            int.tempNum= integer[0];
-            integer[0]= integer[1];
+            double tempNum = integer[0];
+            integer[0] = integer[1];
             tempNum = integer[1];
 
 
 
+        }
     }
-}
