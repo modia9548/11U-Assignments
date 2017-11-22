@@ -30,9 +30,12 @@ public class A6Q3 {
         if (integer[0] > integer[1]) {
             double tempNum = integer[0];
             integer[0] = integer[1];
-            tempNum = integer[1];
+            integer[1] = tempNum;
+            System.out.println("The integer in ascending order are " + integer[0] + "," + integer[1]);
 
 
-
+        } else {
+            System.out.println("The integers in ascending order are " + integer[0] + "," + integer[1]);
         }
     }
+}
