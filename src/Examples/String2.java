@@ -29,10 +29,16 @@ public class String2 {
 
         //find the vowel by going through each letter
         or(int 
+        
+        
+        
         i = 0;
         i<word.length
         (); i++
         
+            
+            
+            
             ){
         //look for vowel at spot i
         if (word.charAt(i) == "o" || word.charAt(i) == "a" || word.charAt(i) == "e" || word.charAt(i) == "i" || word.charAt(i) == "u") //chop the word up at the vowel
@@ -40,7 +46,7 @@ public class String2 {
                 String 
             }
             front = words.substring(0, i);
-        String ending = word.substring(i);
+            String ending = word.substring(i);
             //assemble translation
 
         }

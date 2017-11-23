@@ -28,5 +28,8 @@ public class Strings {
                         String[part2 = s.substring(1, 4) // TODO code application logic here
     
     
+    
+    
+    
     }
 }
