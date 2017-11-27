@@ -47,7 +47,7 @@ public class A6Q6 {
 
             total = total + marks[a];
 
-            
+
 
 
         }

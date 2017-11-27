@@ -43,15 +43,15 @@ public class A6Q5 {
         }
 //find the median
         if (numberOfMarks % 2 == 0) {
-            double firstNumber= marks[numberOfMarks/2]; 
-            double secondNumber= marks[numberOfMarks/2-1];
-            System.out.println("The median is " + (firstNumber+secondNumber)/2);
-            
+            double firstNumber = marks[numberOfMarks / 2];
+            double secondNumber = marks[numberOfMarks / 2 - 1];
+            System.out.println("The median is " + (firstNumber + secondNumber) / 2);
+
         } else {
-           
-                
-            
-            System.out.println("The median is " + marks[numberOfMarks/2]);
+
+
+
+            System.out.println("The median is " + marks[numberOfMarks / 2]);
         }
 
 

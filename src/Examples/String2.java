@@ -32,10 +32,18 @@ public class String2 {
         
         
         
+        
+        
+        
+        
         i = 0;
         i<word.length
         (); i++
         
+            
+            
+            
+            
             
             
             

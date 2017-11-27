@@ -16,13 +16,15 @@ public class A6Q7 {
     public static void main(String[] args) {
         //array up to 1000
         double[] prime = new double[1000];
-        
+
         for (int i = 0; i < 10; i++) {
-            prime[i]= i;
-            
-            
+            prime[i] = i;
+
+
         }
-        
-        
+        //for loop inside for loop
+        for (int i = 0; i < 10; i++) {
+        }
+
     }
 }
