@@ -24,6 +24,7 @@ public class A6Q7 {
         }
         //for loop inside for loop
         for (int i = 0; i < 10; i++) {
+            
         }
 
     }
