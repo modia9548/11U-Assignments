@@ -33,7 +33,7 @@ public class Methods {
     }
     
     public void addFive(int a){
-        a = a + 5
+        a = a + 5;
     }
 
         /**

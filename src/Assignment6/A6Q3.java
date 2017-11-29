@@ -27,7 +27,9 @@ public class A6Q3 {
         integer[0] = input.nextInt();
         integer[1] = input.nextInt();
 
+        //if first integer bigger than other
         if (integer[0] > integer[1]) {
+            //create temporary number and switch places
             double tempNum = integer[0];
             integer[0] = integer[1];
             integer[1] = tempNum;

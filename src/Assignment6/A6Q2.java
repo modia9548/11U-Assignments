@@ -35,6 +35,7 @@ public class A6Q2 {
             people[i] = heightOfPeople;
         }
         double total = 0;
+        //for loop for length of people
         for (int a = 0; a < people.length; a++) {
 
             total = total + people[a];

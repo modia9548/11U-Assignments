@@ -21,11 +21,10 @@ public class A6Q7 {
             prime[i] = i;
 
 
-        }
-        //for loop inside for loop
-        for (int i = 2; i < 10; i++) {
-            
-            
+
+            //for loop inside for loop
+            for (int x = 2; x < 10; x++) {
+            }
         }
 
     }
