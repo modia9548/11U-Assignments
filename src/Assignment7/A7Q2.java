@@ -13,12 +13,25 @@ import java.util.Scanner;
 public class A7Q2 {
     public void markTotal(int mark) {
            Scanner input = new Scanner(System.in);
+             
         
+        
+        if (mark < 50){
+            System.out.println("F");
+        }else if (50 < mark && mark > 59){
+            System.out.println("D");
+    }else if (60 < mark && mark > 69){
+            System.out.println("C");
+    }else if (70 < mark && mark > 79){
+            System.out.println("B");
+    }else if (mark > 80 ){
+            System.out.println("A");
+    }
         //ask for mark
-        System.out.println("What was the mark received? ");
+        System.out.println("Your mark is " + mark);
         
         }
-        if (mark)
+      
     
     
 
@@ -30,15 +43,9 @@ public class A7Q2 {
         A7Q2 test = new A7Q2();
 
      
-        //store mark
-        int mark = input.nextInt();
+   
         
-        if (mark < 50){
-            System.out.println("F");
-        }
-        if (50 < mark && mark > 59){
-            System.out.println("The mark is");
-    }
+        markTotal(mark);
 }
 }
 

@@ -15,7 +15,7 @@ public class Methods {
     //sometimes called a procedure
     //inside the round brackets extra variables needed to run
 
-    public void sayHello(String name) {
+    public static void sayHello(String name) {
         System.out.println("Hello " + name);
 
 
@@ -55,7 +55,7 @@ public class Methods {
         String someName = input.nextLine();
 
         //say hello to the user
-        System.out.println("Hello " + someName);
+        sayHello(someName);
 
         System.out.println("Please enter the length and width of the rectangle");
         double a = input.nextDouble();
