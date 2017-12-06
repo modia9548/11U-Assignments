@@ -11,24 +11,23 @@ import java.util.Scanner;
  * @author Aakash Modi
  */
 public class A7Q2 {
-    public void markTotal(int mark) {
+    public void letterGrade(int mark) {
            Scanner input = new Scanner(System.in);
              
         
         
         if (mark < 50){
-            System.out.println("F");
-        }else if (50 < mark && mark > 59){
-            System.out.println("D");
-    }else if (60 < mark && mark > 69){
-            System.out.println("C");
-    }else if (70 < mark && mark > 79){
-            System.out.println("B");
+            System.out.println("Your mark is F");
+        }else if (50 < mark && mark < 59){
+            System.out.println("Your mark is D");
+    }else if (60 < mark && mark < 69){
+            System.out.println("Your mark is C");
+    }else if (70 < mark && mark < 79){
+            System.out.println("Your mark is B");
     }else if (mark > 80 ){
-            System.out.println("A");
+            System.out.println("Your mark is A");
     }
-        //ask for mark
-        System.out.println("Your mark is " + mark);
+       
         
         }
       
@@ -41,11 +40,16 @@ public class A7Q2 {
     public static void main(String[] args) {
  //create an object to run the methods
         A7Q2 test = new A7Q2();
-
-     
-   
         
-        markTotal(mark);
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("What is you mark? ");
+   
+        int mark= input.nextInt();
+        
+        test.letterGrade(mark);
+        
+        
 }
 }
 
