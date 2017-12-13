@@ -11,25 +11,36 @@ import java.util.Scanner;
  * @author Aakash Modi
  */
 public class A7Q5 {
-    public void chaotic (int lines){
-        
+
+    public void chaotic(int lines) {
+
+        for (int i = 0; i < lines; i++) {
+            int randNum = (int) (Math.random() * (5)) + 1;
+            for (int j = 0; j < randNum; j++) {
+
+
+                System.out.print("*");
+                
+            }
+            System.out.println(" ");
+        }
     }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         //create an object to run the methods
         A7Q5 test = new A7Q5();
 
         Scanner input = new Scanner(System.in);
-        
+
         System.out.println("how many lines do you want");
-        
-       int numLines = input.nextInt();
-       
-       test.chaotic(numLines);
-       
+
+        int numLines = input.nextInt();
+
+        test.chaotic(numLines);
+
     }
 }
