@@ -14,6 +14,7 @@ public class A7Q6 {
 
     public int lastDigit(int num){
         double answer = int num % 10;
+        
     }
     /**
      * @param args the command line arguments
