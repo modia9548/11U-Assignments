@@ -10,23 +10,27 @@ import java.util.Scanner;
  *
  * @author Aakash Modi
  */
-public class A7Q6 {
-
-    public int lastDigit(int num){
-        
-        int answer = num % 10;
-        
-        System.out.println("the last digit of the integer is " + answer);
-        
+public class A7Q7 {
+     public int firstDigit(int num){
+         
+        int answer = input.nextInt();
+       while (answer <= 10){
+            answer = num /10;
+                   }
+         
+        System.out.println("the first digit of the integer is " + answer);
+         
         return answer;
-        
-    }
+     
+            
+        }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         //create an object to run the methods
-        A7Q6 test = new A7Q6();
+           //create an object to run the methods
+        A7Q7 test = new A7Q7();
 
         Scanner input = new Scanner(System.in);
         
@@ -34,7 +38,9 @@ public class A7Q6 {
         
         int num = input.nextInt();
         
-        test.lastDigit(num);
-        
+        test.firstDigit(num);
     }
 }
+
+
+
