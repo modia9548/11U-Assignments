@@ -251,6 +251,7 @@ public class Pong extends JComponent {
             }
             if(player2Score ==10){
                 done = true;
+            }
             // GAME LOGIC ENDS HERE 
 
             // update the drawing (calls paintComponent)
@@ -281,7 +282,7 @@ public class Pong extends JComponent {
                 }
 
             } catch (Exception e) {
-            };
+            }
 
         }
 
