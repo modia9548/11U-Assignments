@@ -244,13 +244,20 @@ public class PlatformGame extends JComponent {
             //jump
             if(onGround && jump){
                 //do something about jumping
+                playerDY = -15;
+                //not on ground anymore
+                onGround = false;
             }
+            //apply gravity
+            playerDY = playerDY + gravity;
             
             //update the player
             player.x = player.x + playerDX;
             player.y = player.y + playerDY;
             
-
+            //assuming not standing on anything
+            onGround = false;
+            
             //check for collisions
             //go through every block and check with
             for (int i = 0; i < blocks.length; i++) {
@@ -267,6 +274,23 @@ public class PlatformGame extends JComponent {
                             player.x = player.x - cWidth;
                         }else{
                             player.x = player.x + cWidth;
+                        }
+                        
+                        //stop the player moving sideways
+                        playerDX = 0;
+                    }else{
+                        if(player.y < blocks[i].y){
+                            //player standing on top of block
+                            player.y = player.y - cHeight;
+                            
+                            //moving up or down?
+                            if(playerDY >= 0){
+                                playerDY = 0;
+                                //standing on it
+                                onGround = true;
+                            }
+                        }else{
+                            player.y = player.y + cHeight;
                         }
                     }
                 }

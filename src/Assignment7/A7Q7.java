@@ -12,15 +12,18 @@ import java.util.Scanner;
  */
 public class A7Q7 {
      public int firstDigit(int num){
-         
-        int answer = input.nextInt();
-       while (answer <= 10){
-            answer = num /10;
+        
+                 
+          Scanner input = new Scanner(System.in);
+          
+       
+       while (num >= 10){
+          num = num/10;
                    }
          
-        System.out.println("the first digit of the integer is " + answer);
+        System.out.println("the first digit of the integer is " + num);
          
-        return answer;
+        return num;
      
             
         }
