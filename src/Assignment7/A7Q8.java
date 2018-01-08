@@ -12,8 +12,20 @@ import java.util.Scanner;
  */
 public class A7Q8 {
 
-    public int allDigitsOdd(int num){
+    public boolean allDigitsOdd(int num){
         
+        //if statement if number is odd
+        if(num % 2 == 1){
+            
+            return true;
+        }else{
+            num = num/10;
+            if(allDigitsOdd(num) == false){
+               return false;
+        }
+        }
+        return false;
+       
     }
     /**
      * @param args the command line arguments
@@ -24,10 +36,12 @@ public class A7Q8 {
 
         Scanner input = new Scanner(System.in);
         
+        //find the number
         System.out.println("what is the number? ");
         
         int num = input.nextInt();
         
+        //put number into method
         test.allDigitsOdd(num);
     }
 }
