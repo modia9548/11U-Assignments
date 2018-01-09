@@ -38,7 +38,7 @@ public class Snake extends JComponent {
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
     //Title of the window
-    String title = "My Game";
+    String title = "Aakash's snake game";
     // sets the framerate and delay for our game
     // you just need to select an approproate framerate
     long desiredFPS = 60;
@@ -49,9 +49,17 @@ public class Snake extends JComponent {
     int snakeWidth = 30;
     Rectangle player = new Rectangle(50, HEIGHT / 2 - snakeHeight / 2, snakeWidth, snakeHeight);
     int snakeSpeed = 5;
+    //displacement in the x and y positions
+    int playerDX = 0;
+    int playerDY = 0;
     //ball to be eaten
-    int ballSize = 30;
-    Rectangle ball = new Rectangle(WIDTH / 2 - ballSize / 2, HEIGHT / 2 - ballSize / 2, ballSize, ballSize);
+    int blockSize = 30;
+    Rectangle block = new Rectangle(WIDTH / 2 - blockSize / 2, HEIGHT / 2 - blockSize / 2, blockSize, blockSize);
+    //control variables
+    boolean left = false;
+    boolean right = false;
+    boolean up = false;
+    boolean down = false;
 
     // GAME VARIABLES END HERE   
     // Constructor to create the Frame and place the panel in
@@ -121,9 +129,11 @@ public class Snake extends JComponent {
 
         g.setColor(Color.WHITE);
 
-        //draw the players
+        //draw the player
         g.fillRect(player.x, player.y, player.width, player.height);
 
+        //draw the ball
+        g.fillRect(block.x, block.y, block.width, block.height);
 
 
         // GAME DRAWING ENDS HERE
@@ -168,7 +178,15 @@ public class Snake extends JComponent {
             // all your game rules and move is done in here
 
             // GAME LOGIC STARTS HERE 
-            
+
+            //movement for the player
+            if (right) {
+                playerDX = 3;
+            } else if (left) {
+                playerDX = -3;
+            } else {
+                playerDX = 0;
+            }
 
 
 
@@ -239,11 +257,31 @@ public class Snake extends JComponent {
         // if a key has been pressed down
         @Override
         public void keyPressed(KeyEvent e) {
-        }
+            int key = e.getKeyCode();
 
-        // if a key has been released
-        @Override
-        public void keyReleased(KeyEvent e) {
+            //figure out which key
+            if (key == KeyEvent.VK_RIGHT) {
+                right = true;
+            } else if (key == KeyEvent.VK_LEFT) {
+                left = true;
+
+            } else if (key == KeyEvent.VK_UP) {
+                up = true;
+
+            } else if (key == KeyEvent.VK_DOWN) {
+                down = true;
+
+            }
+
+            // if a key has been released
+            @Override
+            public void keyReleased
+            (KeyEvent e
+            
+            
+        
+
+        ) {
         }
     }
 
@@ -254,15 +292,15 @@ public class Snake extends JComponent {
      */
     public static void main(String[] args) {
 
-        // creates an instance of my game
+            // creates an instance of my game
 
-        Snake game = new Snake();
+            Snake game = new Snake();
 
 
 
-        // starts the game loop
+            // starts the game loop
 
-        game.run();
+            game.run();
 
+        }
     }
-}
