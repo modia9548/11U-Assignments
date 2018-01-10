@@ -15,7 +15,7 @@ public class A7Q2 {
            Scanner input = new Scanner(System.in);
              
         
-        
+        //number requirements for letter marks
         if (mark < 50){
             System.out.println("Your mark is F");
         }else if (50 < mark && mark < 59){

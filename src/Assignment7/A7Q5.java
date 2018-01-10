@@ -14,8 +14,11 @@ public class A7Q5 {
 
     public void chaotic(int lines) {
 
+        //for loop for number of lines
         for (int i = 0; i < lines; i++) {
             int randNum = (int) (Math.random() * (5)) + 1;
+            
+            //input for number of stars
             for (int j = 0; j < randNum; j++) {
 
 

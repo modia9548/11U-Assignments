@@ -53,7 +53,7 @@ public class Snake extends JComponent {
     int playerDX = 0;
     int playerDY = 0;
     //ball to be eaten
-    int blockSize = 30;
+    int blockSize = 20;
     Rectangle block = new Rectangle(WIDTH / 2 - blockSize / 2, HEIGHT / 2 - blockSize / 2, blockSize, blockSize);
     //control variables
     boolean left = false;
@@ -182,13 +182,30 @@ public class Snake extends JComponent {
             //movement for the player
             if (right) {
                 playerDX = 3;
+                //so player does not move diagonally
+                playerDY = 0;
             } else if (left) {
                 playerDX = -3;
-            } else {
+                playerDY = 0;
+            } else if (up) {
+                playerDY = -3;
                 playerDX = 0;
+            } else if (down) {
+                playerDY = 3;
+                playerDX = 0;
+
             }
 
 
+            //apply update to player for movement
+            player.x = player.x + playerDX;
+            player.y = player.y + playerDY;
+
+
+            //did the snake hit the block
+            if (player.intersects(block)) {
+                
+            }
 
 
             // GAME LOGIC ENDS HERE 
@@ -273,15 +290,28 @@ public class Snake extends JComponent {
 
             }
 
-            // if a key has been released
-            @Override
-            public void keyReleased
-            (KeyEvent e
-            
-            
-        
+        }
 
-        ) {
+        // if a key has been released
+        @Override
+        public void keyReleased(KeyEvent e) {
+
+            int key = e.getKeyCode();
+
+            //statement is false
+            if (key == KeyEvent.VK_RIGHT) {
+                right = false;
+            } else if (key == KeyEvent.VK_LEFT) {
+                left = false;
+
+            } else if (key == KeyEvent.VK_UP) {
+                up = false;
+
+            } else if (key == KeyEvent.VK_DOWN) {
+                down = false;
+
+            }
+
         }
     }
 
@@ -292,15 +322,15 @@ public class Snake extends JComponent {
      */
     public static void main(String[] args) {
 
-            // creates an instance of my game
+        // creates an instance of my game
 
-            Snake game = new Snake();
+        Snake game = new Snake();
 
 
 
-            // starts the game loop
+        // starts the game loop
 
-            game.run();
+        game.run();
 
-        }
     }
+}

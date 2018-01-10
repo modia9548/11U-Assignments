@@ -15,6 +15,7 @@ public class A7Q4 {
     
     public double compoundInterest(double initialMoney, double years,double interestRate){
         
+        //calculate adjusted interest
        double adjustedInterest = Math.pow(1 + interestRate, years);
        
        double answer = initialMoney * adjustedInterest;
@@ -46,6 +47,7 @@ public class A7Q4 {
         
         int years = input.nextInt();
         
+        //put input into method
         test.compoundInterest(factor, years, interest);
     }
 }

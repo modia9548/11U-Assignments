@@ -18,8 +18,10 @@ public class A7Q3 {
         
         System.out.println("The numbers are ");
         
+        
         for (int numDivided = 1; numDivided <= factor; numDivided++) {
             
+            //facotrs of num divided
             int answer = factor % numDivided;
 
 

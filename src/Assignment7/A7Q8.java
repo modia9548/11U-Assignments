@@ -14,16 +14,21 @@ public class A7Q8 {
 
     public boolean allDigitsOdd(int num){
         
-        //if statement if number is odd
-        if(num % 2 == 1){
-            
-            return true;
-        }else{
-            num = num/10;
-            if(allDigitsOdd(num) == false){
-               return false;
-        }
-        }
+        //while statement if number is odd
+        
+       while (num >= 11){
+          num = num/10;
+          if(num % 2 == 1){
+              return true;
+                   }else{
+              if(num %2 == 0){
+                  return false;
+              }
+          }     
+       }
+        
+       
+
         return false;
        
     }
@@ -32,7 +37,7 @@ public class A7Q8 {
      */
     public static void main(String[] args) {
           //create an object to run the methods
-        A7Q7 test = new A7Q7();
+        A7Q8 test = new A7Q8();
 
         Scanner input = new Scanner(System.in);
         
@@ -42,6 +47,9 @@ public class A7Q8 {
         int num = input.nextInt();
         
         //put number into method
-        test.allDigitsOdd(num);
+        boolean ans = test.allDigitsOdd(num);
+        
+        //output if true or false
+        System.out.println(ans);
     }
 }

@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class A7Q1 {
     public double areaOfCircle(double radius){
-        //write formula to alculate area
+        //write formula to calculate area
         double answer = Math.PI * Math.pow(radius,2);
         //send back answer
         return answer;

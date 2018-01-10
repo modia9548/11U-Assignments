@@ -16,7 +16,7 @@ public class A7Q7 {
                  
           Scanner input = new Scanner(System.in);
           
-       
+       //until you reach the first digit
        while (num >= 10){
           num = num/10;
                    }
@@ -41,6 +41,7 @@ public class A7Q7 {
         
         int num = input.nextInt();
         
+        //take input into method
         test.firstDigit(num);
     }
 }

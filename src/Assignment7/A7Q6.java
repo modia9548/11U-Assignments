@@ -14,6 +14,7 @@ public class A7Q6 {
 
     public int lastDigit(int num){
         
+        //get last digit of int
         int answer = num % 10;
         
         System.out.println("the last digit of the integer is " + answer);
@@ -34,6 +35,7 @@ public class A7Q6 {
         
         int num = input.nextInt();
         
+        //put input into method
         test.lastDigit(num);
         
     }
