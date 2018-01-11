@@ -24,6 +24,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import java.awt.event.MouseWheelEvent;
+import java.util.Scanner;
 
 /**
  *
@@ -60,6 +61,14 @@ public class Snake extends JComponent {
     boolean right = false;
     boolean up = false;
     boolean down = false;
+    
+    //create array for spaces used on snake
+    //create a scanner
+        Scanner input = new Scanner(System.in);
+        // array to store costs/expenses
+        double[] snakeLength = new double[100];
+        
+        
 
     // GAME VARIABLES END HERE   
     // Constructor to create the Frame and place the panel in
@@ -163,6 +172,10 @@ public class Snake extends JComponent {
 
 
         // the main game loop section
+        for (int i = 0; i < snakeLength.length; i++) {
+            int snakeSize = input.nextInt();
+            snakeLength[i] = snakeSize;
+        }
 
         // game will end if you set done = false;
 
@@ -204,6 +217,7 @@ public class Snake extends JComponent {
 
             //did the snake hit the block
             if (player.intersects(block)) {
+                
                 
             }
 
