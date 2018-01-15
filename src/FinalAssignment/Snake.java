@@ -45,7 +45,8 @@ public class Snake extends JComponent {
     long desiredFPS = 60;
     long desiredTime = (1000) / desiredFPS;
     // YOUR GAME VARIABLES WOULD GO HERE
-//paddles for players to use
+    
+    //snake
     int snakeHeight = 30;
     int snakeWidth = 30;
     Rectangle player = new Rectangle(50, HEIGHT / 2 - snakeHeight / 2, snakeWidth, snakeHeight);
@@ -65,8 +66,8 @@ public class Snake extends JComponent {
     //create array for spaces used on snake
     //create a scanner
         Scanner input = new Scanner(System.in);
-        // array to store costs/expenses
-        double[] snakeLength = new double[100];
+        // array to store costs/expenses     
+        Rectangle[] snakeLength = new Rectangle[100];
         
         
 
@@ -140,6 +141,12 @@ public class Snake extends JComponent {
 
         //draw the player
         g.fillRect(player.x, player.y, player.width, player.height);
+        
+        //loop for length of snake
+        for (int i = 0; i < snakeLength.length; i++) {
+             g.fillRect(snakeLength[i].x,snakeLength[i].y,snakeLength[i].width,snakeLength[i].height);
+            
+        }
 
         //draw the ball
         g.fillRect(block.x, block.y, block.width, block.height);
@@ -172,10 +179,7 @@ public class Snake extends JComponent {
 
 
         // the main game loop section
-        for (int i = 0; i < snakeLength.length; i++) {
-            int snakeSize = input.nextInt();
-            snakeLength[i] = snakeSize;
-        }
+       
 
         // game will end if you set done = false;
 
