@@ -49,7 +49,7 @@ public class Snake extends JComponent {
     //snake
     int snakeHeight = 30;
     int snakeWidth = 30;
-    Rectangle player = new Rectangle(50, HEIGHT / 2 - snakeHeight / 2, snakeWidth, snakeHeight);
+    Rectangle snake = new Rectangle(50, HEIGHT / 2 - snakeHeight / 2, snakeWidth, snakeHeight);
     int snakeSpeed = 5;
     //displacement in the x and y positions
     int playerDX = 0;
@@ -68,6 +68,9 @@ public class Snake extends JComponent {
         Scanner input = new Scanner(System.in);
         // array to store costs/expenses     
         Rectangle[] snakeLength = new Rectangle[100];
+        
+        //create the size of the snake
+        int snakeSize = 0;
         
         
 
@@ -140,10 +143,10 @@ public class Snake extends JComponent {
         g.setColor(Color.WHITE);
 
         //draw the player
-        g.fillRect(player.x, player.y, player.width, player.height);
+        g.fillRect(snake.x, snake.y, snake.width, snake.height);
         
         //loop for length of snake
-        for (int i = 0; i < snakeLength.length; i++) {
+        for (int i = 0; i < snakeSize; i++) {
              g.fillRect(snakeLength[i].x,snakeLength[i].y,snakeLength[i].width,snakeLength[i].height);
             
         }
@@ -160,6 +163,8 @@ public class Snake extends JComponent {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
+        
+        
     }
 
     // The main game loop
@@ -215,13 +220,13 @@ public class Snake extends JComponent {
 
 
             //apply update to player for movement
-            player.x = player.x + playerDX;
-            player.y = player.y + playerDY;
+            snake.x = snake.x + playerDX;
+            snake.y = snake.y + playerDY;
 
 
             //did the snake hit the block
-            if (player.intersects(block)) {
-                
+            if (snake.intersects(block)) {
+                snakeSize = snakeSize + 1;
                 
             }
 
