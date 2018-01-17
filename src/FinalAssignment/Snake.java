@@ -63,6 +63,10 @@ public class Snake extends JComponent {
     boolean up = false;
     boolean down = false;
     
+    //creating random numbers for random block position
+    int randWidth = (int) (Math.random() * (WIDTH)) + 1;
+    int randHeight = (int) (Math.random() * (HEIGHT)) + 1;
+    
     //create array for spaces used on snake
     //create a scanner
         Scanner input = new Scanner(System.in);
@@ -217,6 +221,9 @@ public class Snake extends JComponent {
                 playerDX = 0;
 
             }
+            
+            
+            
 
 
             //apply update to player for movement
