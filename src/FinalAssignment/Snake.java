@@ -54,18 +54,21 @@ public class Snake extends JComponent {
     //displacement in the x and y positions
     int playerDX = 0;
     int playerDY = 0;
+    
+      //creating random numbers for random block position
+    int randWidth = (int) (Math.random() * (WIDTH)) + 1;
+    int randHeight = (int) (Math.random() * (HEIGHT)) + 1;
+    
     //ball to be eaten
     int blockSize = 20;
-    Rectangle block = new Rectangle(WIDTH / 2 - blockSize / 2, HEIGHT / 2 - blockSize / 2, blockSize, blockSize);
+    Rectangle block = new Rectangle(randWidth - blockSize / 2, randHeight - blockSize / 2, blockSize, blockSize);
     //control variables
     boolean left = false;
     boolean right = false;
     boolean up = false;
     boolean down = false;
     
-    //creating random numbers for random block position
-    int randWidth = (int) (Math.random() * (WIDTH)) + 1;
-    int randHeight = (int) (Math.random() * (HEIGHT)) + 1;
+  
     
     //create array for spaces used on snake
     //create a scanner
@@ -307,6 +310,7 @@ public class Snake extends JComponent {
             int key = e.getKeyCode();
 
             //figure out which key
+           
             if (key == KeyEvent.VK_RIGHT) {
                 right = true;
             } else if (key == KeyEvent.VK_LEFT) {
