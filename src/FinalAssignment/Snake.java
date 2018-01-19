@@ -63,6 +63,8 @@ public class Snake extends JComponent {
     //ball to be eaten
     int blockSize = 20;
     Rectangle block = new Rectangle(randWidth - blockSize / 2, randHeight - blockSize / 2, blockSize, blockSize);
+    //add another rectangle
+    
     //control variables
     boolean left = false;
     boolean right = false;
@@ -226,10 +228,12 @@ public class Snake extends JComponent {
             snake.x = snake.x + playerDX;
             snake.y = snake.y + playerDY;
 
+            
 
             //did the snake hit the block
             if (snake.intersects(block)) {
-                snakeSize = snakeLength[i+1];
+                
+                snakeSize = snakeSize + 1;
                 
                 //generate random numbers for x and y position
                 int randomX = (int) (Math.random() * (WIDTH)) + 1;
