@@ -45,7 +45,6 @@ public class Snake extends JComponent {
     long desiredFPS = 60;
     long desiredTime = (1000) / desiredFPS;
     // YOUR GAME VARIABLES WOULD GO HERE
-    
     //snake
     int snakeHeight = 30;
     int snakeWidth = 30;
@@ -55,10 +54,12 @@ public class Snake extends JComponent {
     int playerDX = 0;
     int playerDY = 0;
     
-      //creating random numbers for random block position
+    //displacement in x and y positions for block
+    int blockDX = 0;
+    int blockDY = 0;
+    //creating random numbers for random block position
     int randWidth = (int) (Math.random() * (WIDTH)) + 1;
     int randHeight = (int) (Math.random() * (HEIGHT)) + 1;
-    
     //ball to be eaten
     int blockSize = 20;
     Rectangle block = new Rectangle(randWidth - blockSize / 2, randHeight - blockSize / 2, blockSize, blockSize);
@@ -67,19 +68,13 @@ public class Snake extends JComponent {
     boolean right = false;
     boolean up = false;
     boolean down = false;
-    
-  
-    
     //create array for spaces used on snake
     //create a scanner
-        Scanner input = new Scanner(System.in);
-        // array to store costs/expenses     
-        Rectangle[] snakeLength = new Rectangle[100];
-        
-        //create the size of the snake
-        int snakeSize = 0;
-        
-        
+    Scanner input = new Scanner(System.in);
+    // array to store costs/expenses     
+    Rectangle[] snakeLength = new Rectangle[100];
+    //create the size of the snake
+    int snakeSize = 0;
 
     // GAME VARIABLES END HERE   
     // Constructor to create the Frame and place the panel in
@@ -151,11 +146,11 @@ public class Snake extends JComponent {
 
         //draw the player
         g.fillRect(snake.x, snake.y, snake.width, snake.height);
-        
+
         //loop for length of snake
         for (int i = 0; i < snakeSize; i++) {
-             g.fillRect(snakeLength[i].x,snakeLength[i].y,snakeLength[i].width,snakeLength[i].height);
-            
+            g.fillRect(snakeLength[i].x, snakeLength[i].y, snakeLength[i].width, snakeLength[i].height);
+
         }
 
         //draw the ball
@@ -170,8 +165,6 @@ public class Snake extends JComponent {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
-        
-        
     }
 
     // The main game loop
@@ -191,7 +184,7 @@ public class Snake extends JComponent {
 
 
         // the main game loop section
-       
+
 
         // game will end if you set done = false;
 
@@ -224,9 +217,9 @@ public class Snake extends JComponent {
                 playerDX = 0;
 
             }
-            
-            
-            
+
+
+
 
 
             //apply update to player for movement
@@ -236,8 +229,16 @@ public class Snake extends JComponent {
 
             //did the snake hit the block
             if (snake.intersects(block)) {
-                snakeSize = snakeSize + 1;
+                snakeSize = snakeLength[i+1];
                 
+                //generate random numbers for x and y position
+                int randomX = (int) (Math.random() * (WIDTH)) + 1;
+                int randomY = (int) (Math.random() * (HEIGHT)) + 1;
+
+                System.out.println(randomX + " " + randomY);
+                //update coordinates of block
+                block.x = randomX  ;
+                block.y = randomY;
             }
 
 
@@ -310,7 +311,7 @@ public class Snake extends JComponent {
             int key = e.getKeyCode();
 
             //figure out which key
-           
+
             if (key == KeyEvent.VK_RIGHT) {
                 right = true;
             } else if (key == KeyEvent.VK_LEFT) {
