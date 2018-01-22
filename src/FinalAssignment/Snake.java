@@ -63,7 +63,7 @@ public class Snake extends JComponent {
     //ball to be eaten
     int blockSize = 20;
     Rectangle block = new Rectangle(randWidth - blockSize / 2, randHeight - blockSize / 2, blockSize, blockSize);
-    //add another rectangle
+    
     
     //control variables
     boolean left = false;
@@ -151,6 +151,7 @@ public class Snake extends JComponent {
 
         //loop for length of snake
         for (int i = 0; i < snakeSize; i++) {
+        //add rectangle for size of snake
             g.fillRect(snakeLength[i].x, snakeLength[i].y, snakeLength[i].width, snakeLength[i].height);
 
         }
