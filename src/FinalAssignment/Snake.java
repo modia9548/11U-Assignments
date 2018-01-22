@@ -63,7 +63,7 @@ public class Snake extends JComponent {
     //ball to be eaten
     int blockSize = 20;
     Rectangle block = new Rectangle(randWidth - blockSize / 2, randHeight - blockSize / 2, blockSize, blockSize);
-    //add another rectangle
+    
     
     //control variables
     boolean left = false;
@@ -73,10 +73,14 @@ public class Snake extends JComponent {
     //create array for spaces used on snake
     //create a scanner
     Scanner input = new Scanner(System.in);
-    // array to store costs/expenses     
+    // array to store snake blocks     
     Rectangle[] snakeLength = new Rectangle[100];
     //create the size of the snake
     int snakeSize = 0;
+    
+    //create a timer for how long the game lasts
+    import java.util.Timer;
+    
 
     // GAME VARIABLES END HERE   
     // Constructor to create the Frame and place the panel in
@@ -202,7 +206,13 @@ public class Snake extends JComponent {
             // all your game rules and move is done in here
 
             // GAME LOGIC STARTS HERE 
-
+            
+            //timer for length of game
+            for (int i = 0; i < 60; i++) {
+                
+                
+            }
+            
             //movement for the player
             if (right) {
                 playerDX = 3;
@@ -233,7 +243,15 @@ public class Snake extends JComponent {
             //did the snake hit the block
             if (snake.intersects(block)) {
                 
-                snakeSize = snakeSize + 1;
+               
+               
+                //moving block of snake to next spot in the array
+                for (int i = 0; i < 100; i++) {
+                    
+                
+                snakeLength[i] = new Rectangle() ;
+                
+                }
                 
                 //generate random numbers for x and y position
                 int randomX = (int) (Math.random() * (WIDTH)) + 1;
@@ -241,7 +259,7 @@ public class Snake extends JComponent {
 
                 System.out.println(randomX + " " + randomY);
                 //update coordinates of block
-                block.x = randomX  ;
+                block.x = randomX;
                 block.y = randomY;
             }
 
