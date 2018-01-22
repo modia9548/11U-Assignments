@@ -155,6 +155,7 @@ public class Snake extends JComponent {
 
         //loop for length of snake
         for (int i = 0; i < snakeSize; i++) {
+        //add rectangle for size of snake
             g.fillRect(snakeLength[i].x, snakeLength[i].y, snakeLength[i].width, snakeLength[i].height);
 
         }
