@@ -76,7 +76,7 @@ public class Snake extends JComponent {
     // array to store snake blocks     
     Rectangle[] snakeLength = new Rectangle[100];
     //create the size of the snake
-    int blocksEaten = 0;
+    int snakeSize = 0;
     
     
 
@@ -155,7 +155,7 @@ public class Snake extends JComponent {
 
         
 
-        }
+    
 
         //draw the ball
         g.fillRect(block.x, block.y, block.width, block.height);
