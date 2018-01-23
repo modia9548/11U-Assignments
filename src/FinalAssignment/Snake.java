@@ -76,10 +76,10 @@ public class Snake extends JComponent {
     // array to store snake blocks     
     Rectangle[] snakeLength = new Rectangle[100];
     //create the size of the snake
-    int snakeSize = 0;
+    int blocksEaten = 0;
     
-    //create a timer for how long the game lasts
-    import java.util.Timer;
+    
+
     
 
     // GAME VARIABLES END HERE   
@@ -153,10 +153,7 @@ public class Snake extends JComponent {
         //draw the player
         g.fillRect(snake.x, snake.y, snake.width, snake.height);
 
-        //loop for length of snake
-        for (int i = 0; i < snakeSize; i++) {
-        //add rectangle for size of snake
-            g.fillRect(snakeLength[i].x, snakeLength[i].y, snakeLength[i].width, snakeLength[i].height);
+        
 
         }
 
@@ -209,7 +206,8 @@ public class Snake extends JComponent {
             // GAME LOGIC STARTS HERE 
             
             //timer for length of game
-            for (int i = 0; i < 60; i++) {
+            for (int timer = 0; timer <= 600; timer++) {
+                
                 
                 
             }
@@ -244,7 +242,7 @@ public class Snake extends JComponent {
             //did the snake hit the block
             if (snake.intersects(block)) {
                 
-               
+               blocksEaten = blocksEaten +1;
                
                 //moving block of snake to next spot in the array
                 for (int i = 0; i < 100; i++) {
