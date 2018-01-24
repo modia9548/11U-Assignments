@@ -75,8 +75,9 @@ public class Snake extends JComponent {
     Scanner input = new Scanner(System.in);
     // array to store snake blocks     
     Rectangle[] snakeLength = new Rectangle[100];
+    
     //create the size of the snake
-    int snakeSize = 0;
+    int blocksEaten = 0;
     
     
 
@@ -206,11 +207,10 @@ public class Snake extends JComponent {
             // GAME LOGIC STARTS HERE 
             
             //timer for length of game
-            for (int timer = 0; timer <= 600; timer++) {
-                
-                
-                
+            for (int timer = 0; timer <= 600; timer++) {                                
+            
             }
+            
             
             //movement for the player
             if (right) {
@@ -242,25 +242,20 @@ public class Snake extends JComponent {
             //did the snake hit the block
             if (snake.intersects(block)) {
                 
-               blocksEaten = blocksEaten +1;
+            
+             blocksEaten = blocksEaten + 1;
                
-                //moving block of snake to next spot in the array
-                for (int i = 0; i < 100; i++) {
-                    
-                
-                snakeLength[i] = new Rectangle() ;
-                
-                }
                 
                 //generate random numbers for x and y position
                 int randomX = (int) (Math.random() * (WIDTH)) + 1;
                 int randomY = (int) (Math.random() * (HEIGHT)) + 1;
 
-                System.out.println(randomX + " " + randomY);
+                
                 //update coordinates of block
                 block.x = randomX;
                 block.y = randomY;
             }
+            System.out.println("you ate " + blocksEaten + " blocks");
 
 
             // GAME LOGIC ENDS HERE 
